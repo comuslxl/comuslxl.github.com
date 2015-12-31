@@ -44,7 +44,7 @@
 <meta property="og:image" content="http://7xpoh6.com1.z0.glb.clouddn.com/cmder.png">
 <meta property="og:image" content="http://7xpoh6.com1.z0.glb.clouddn.com/cmder-cygwin.png">
 <meta property="og:image" content="http://7xpoh6.com1.z0.glb.clouddn.com/vim_msys2.png">
-<meta property="og:updated_time" content="2015-12-31T14:43:46.809Z">
+<meta property="og:updated_time" content="2015-12-31T14:52:18.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="将ConEmu/Cmder作为MSYS2/Cygwin">
 <meta name="twitter:description" content="简介&amp;emsp;&amp;emsp;Cygwin和MSYS2想必不用多说，它们都可以使用windows的cmd以及mintty作为终端，但cmd的太弱，mintty虽然强大，但不支持多标签。&amp;emsp;&amp;emsp;ConEmu是Windows命令行cmd.exe的加强版，而cmder对ConEmu作了进一步整合，加入了Clink，应该是最好用的Windows平台终端工具，使用cmder作为Cygwin和M">
@@ -191,8 +191,7 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="简介">简介</h2><p>&emsp;&emsp;Cygwin和MSYS2想必不用多说，它们都可以使用windows的cmd以及mintty作为终端，但cmd的太弱，mintty虽然强大，但不支持多标签。<br>&emsp;&emsp;ConEmu是Windows命令行cmd.exe的加强版，而cmder对ConEmu作了进一步整合，加入了Clink，应该是最好用的Windows平台终端工具，使用cmder作为Cygwin和MSYS2的终端应该是不错的选择。</p>
-<p>&emsp;&emsp;Cmder可以从<a href="http://cmder.net/" target="_blank" rel="external"><strong>这里</strong></a>下载。安装打开并配置好后是这样的。<br><img src="http://7xpoh6.com1.z0.glb.clouddn.com/cmder.png" alt="Cmder"></p>
+        <span itemprop="articleBody"><h2 id="简介">简介</h2><p>&emsp;&emsp;Cygwin和MSYS2想必不用多说，它们都可以使用windows的cmd以及mintty作为终端，但cmd的太弱，mintty虽然强大，但不支持多标签。<br>&emsp;&emsp;ConEmu是Windows命令行cmd.exe的加强版，而cmder对ConEmu作了进一步整合，加入了Clink，应该是最好用的Windows平台终端工具，使用cmder作为Cygwin和MSYS2的终端应该是不错的选择。<br><a id="more"></a><br>&emsp;&emsp;Cmder可以从<a href="http://cmder.net/" target="_blank" rel="external"><strong>这里</strong></a>下载。安装打开并配置好后是这样的。<br><img src="http://7xpoh6.com1.z0.glb.clouddn.com/cmder.png" alt="Cmder"></p>
 <h2 id="整合">整合</h2><p>&emsp;&emsp;使用cmder作为CYGWIN终端，可以参照下图设置：<br><img src="http://7xpoh6.com1.z0.glb.clouddn.com/cmder-cygwin.png" alt="Cmder Task"></p>
 <p>上图Cygwin的图标和启动的bat路径请自行指定。bat文件内容：</p>
 <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">echo</span> off</span><br><span class="line"><span class="function"></span><br><span class="line">C:</span><br><span class="line"><span class="title">chdir</span> <span class="title">C</span>:\<span class="title">cygwin64</span>\<span class="title">bin</span></span><br><span class="line"></span><br><span class="line"><span class="title">bash</span> --<span class="title">login</span> -<span class="title">i</span></span></span><br></pre></td></tr></table></figure>
