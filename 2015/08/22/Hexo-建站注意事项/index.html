@@ -41,7 +41,7 @@
 <meta property="og:url" content="http://yoursite.com/2015/08/22/Hexo-建站注意事项/index.html">
 <meta property="og:site_name" content="lXloc's Blog">
 <meta property="og:description" content="Hexo建站网上关于使用Hexo建站的教程有很多，可以参考官方教程，也可以网上搜下网上他人的建站经验，不再多写。">
-<meta property="og:updated_time" content="2016-01-01T15:54:22.540Z">
+<meta property="og:updated_time" content="2016-01-01T16:14:08.700Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 建站注意事项">
 <meta name="twitter:description" content="Hexo建站网上关于使用Hexo建站的教程有很多，可以参考官方教程，也可以网上搜下网上他人的建站经验，不再多写。">
@@ -200,15 +200,16 @@
 <a id="more"></a>
 <h2 id="注意事项">注意事项</h2><p>参照网上的教程，应该可以很快搭建出自己的Blog，但是有些时候会碰到一些问题，比如下面列出的几条</p>
 <ul>
-<li>Q: 为什么我的“标签”页提示404？<br>A: 标签页是需要手动建立的<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<li><p>Q: 为什么我的“标签”页提示404？<br>A: 标签页是需要手动建立的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>  打开<code>source\tags\index.md</code>，在Front-matter中写入</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">type</span>:</span> <span class="string">"tags"</span></span><br></pre></td></tr></table></figure>
 </li>
+<li><p>Q: 为什么每次deploy都要求输入github帐号和密码？<br>A: 查看_config.yml的deploy中一定要将repository写为</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:username/repository.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
+<p>  而不是</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: <span class="attribute">https</span>:<span class="comment">//github.com/username/repository.git</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p>打开<code>source\tags\index.md</code>，在Front-matter中写入<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type: &#34;tags&#34;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>Q: 为什么每次deploy都要求输入github帐号和密码？<br>A: 查看_config.yml的deploy中一定要将repository写为<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:username/repository.git</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>而不是<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">https:</span><span class="comment">//github.com/username/repository.git</span></span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
