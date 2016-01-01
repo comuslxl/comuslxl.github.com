@@ -35,16 +35,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Hexo建站，除了基本的Nodejs，Git以及hexo, hexo-server安装好后，">
+<meta name="description" content="Hexo建站网上关于使用Hexo建站的教程有很多，可以参考官方教程，也可以网上搜下网上他人的建站经验，不再多写。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 建站教程">
-<meta property="og:url" content="http://yoursite.com/2015/08/22/Hexo-建站教程/index.html">
+<meta property="og:title" content="Hexo 建站注意事项">
+<meta property="og:url" content="http://yoursite.com/2015/08/22/Hexo-建站注意事项/index.html">
 <meta property="og:site_name" content="lXloc's Blog">
-<meta property="og:description" content="Hexo建站，除了基本的Nodejs，Git以及hexo, hexo-server安装好后，">
-<meta property="og:updated_time" content="2016-01-01T00:04:55.015Z">
+<meta property="og:description" content="Hexo建站网上关于使用Hexo建站的教程有很多，可以参考官方教程，也可以网上搜下网上他人的建站经验，不再多写。">
+<meta property="og:updated_time" content="2016-01-01T15:54:22.540Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 建站教程">
-<meta name="twitter:description" content="Hexo建站，除了基本的Nodejs，Git以及hexo, hexo-server安装好后，">
+<meta name="twitter:title" content="Hexo 建站注意事项">
+<meta name="twitter:description" content="Hexo建站网上关于使用Hexo建站的教程有很多，可以参考官方教程，也可以网上搜下网上他人的建站经验，不再多写。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -54,7 +54,7 @@
   };
 </script>
 
-  <title> Hexo 建站教程 | lXloc's Blog </title>
+  <title> Hexo 建站注意事项 | lXloc's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -161,7 +161,7 @@
           
           
             
-              Hexo 建站教程
+              Hexo 建站注意事项
             
           
         </h1>
@@ -181,8 +181,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/08/22/Hexo-建站教程/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/22/Hexo-建站教程/" itemprop="commentsCount"></span>
+              <a href="/2015/08/22/Hexo-建站注意事项/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/22/Hexo-建站注意事项/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -196,11 +196,19 @@
       
 
       
-        <span itemprop="articleBody"><p>Hexo建站，除了基本的Nodejs，Git以及hexo, hexo-server安装好后，</p>
+        <span itemprop="articleBody"><h2 id="Hexo建站">Hexo建站</h2><p>网上关于使用Hexo建站的教程有很多，可以参考<a href="https://hexo.io/docs/" target="_blank" rel="external"><strong>官方教程</strong></a>，也可以网上搜下网上他人的建站经验，不再多写。</p>
 <a id="more"></a>
+<h2 id="注意事项">注意事项</h2><p>参照网上的教程，应该可以很快搭建出自己的Blog，但是有些时候会碰到一些问题，比如下面列出的几条</p>
 <ul>
-<li>_config.yml的deploy中一定要将repository写为git@github.com:username/repository.git，否则每次都会提示输入用户名密码，无法使用rsa key。</li>
+<li>Q: 为什么我的“标签”页提示404？<br>A: 标签页是需要手动建立的<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
+<p>打开<code>source\tags\index.md</code>，在Front-matter中写入<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type: &#34;tags&#34;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>Q: 为什么每次deploy都要求输入github帐号和密码？<br>A: 查看_config.yml的deploy中一定要将repository写为<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:username/repository.git</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>而不是<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">https:</span><span class="comment">//github.com/username/repository.git</span></span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -249,8 +257,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/08/22/Hexo-建站教程/"
-                   data-title="Hexo 建站教程" data-url="http://yoursite.com/2015/08/22/Hexo-建站教程/">
+              <div class="ds-thread" data-thread-key="2015/08/22/Hexo-建站注意事项/"
+                   data-title="Hexo 建站注意事项" data-url="http://yoursite.com/2015/08/22/Hexo-建站注意事项/">
               </div>
             
           </div>
@@ -332,7 +340,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo建站"><span class="nav-number">1.</span> <span class="nav-text">Hexo建站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项"><span class="nav-number">2.</span> <span class="nav-text">注意事项</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
